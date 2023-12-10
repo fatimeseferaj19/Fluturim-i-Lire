@@ -1,1 +1,153 @@
 # Fluturim-i-Lire
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="mausi">
+            <div class="cursor"></div>
+            <script>
+                const cursor = document.querySelector('.cursor');
+    
+                document.addEventListener('mousemove', e => {
+                    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left:"+(e.pageX - 10)+"px")
+                })
+    
+                document.addEventListener('click', () => {
+                    cursor.classList.add("expand");
+    
+                    setTimeout(() => {
+                        cursor.classList.remove("expand");
+                    }, 500)
+                })
+    
+               
+            </script>
+            <div class="responsive">
+        <div class="permbajtja" >
+        <nav>
+            <ul>
+            <li><a href="#AboutUs" >AboutUs</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="news.html" >News</a></li>
+            <li><a href="ContactUs.html">ContactUs</a></li>
+        </ul>
+        </nav>
+
+        <div class="container">
+
+            <video  width="100%" height="auto" autoplay loop muted plays-inline class="back-video">
+                <source class="videoja" src="img/Sky.mp4" >
+            </video>
+        </div>
+
+            <div class="content"  >
+                <h1 class="titulli">Fluturim i Lirë</h1>
+            </div>   
+    </div>
+
+        <div id="AboutUs" class="section1">
+
+            <div class="container1">
+                <div class="text">
+                    <p>OUR SERVICES</p><br>
+                    <h1>We Have Best Luxury Services For You</h1><br>
+                    <p> Step into a realm of unparalleled luxury with our exclusive jet services. Elevate your travel experience as you soar through the skies in opulence and style. From personalized in-flight catering to exclusive concierge services, every detail is crafted to exceed your expectations. Enjoy the freedom to customize your itinerary and indulge in a journey where luxury knows no bounds. Welcome aboard to a world where every moment is an affirmation of your exceptional taste. Your extraordinary travel experience begins here.    
+                     </p>
+                     </div>
+                <div class="box">
+                <div class="box1">
+                    <i class="fa-solid fa-house"></i>
+                    <h2>Private Jet Charter</h2>
+                </div>
+                <div class="box2">
+                    <i class="fa-solid fa-gears"></i>
+                    <h2>Private Helicopter</h2>
+                </div>
+                <div class="box3">
+                    <i class="fa-solid fa-truck-medical"></i>
+                    <h2>Air Ambulance</h2>
+                </div>
+                <div class="box4">
+                    <i class="fa-solid fa-business-time"></i>
+                    <h2>Business Jet Charcter</h2>
+                </div>
+            </div>
+             </div>
+            </div>
+
+            <div class="section2">
+                <div class="container2">
+
+            </div>
+        </div>
+
+        <div class="section3">
+            <div class="container3">
+                <img class="img2" src="img/piloti.jpg" alt="" width="100%" height="100%">
+                <img class="img3" src="img/BigJet.jpg" alt="" width="100%" height="100%">
+                <img class="img2" src="img/brenda.jpg" alt="" width="100%" height="100%">
+
+            </div>
+        </div>
+
+        <div class="section4">
+            <div class="container4">
+                <img class="img4" src="img/luxuryJet.jpg" alt="" width="100%" height="100%">
+                <div class="text2">
+                    <h1>Tailored Luxury:</h1><br>
+                    <p>Indulge in personalized travel, where every detail is curated to meet your unique preferences and needs. Whether it's a quick business trip or a leisurely vacation, private jets redefine the art of air travel with comfort and exclusivity.</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="section4">
+            <div class="container4">
+                <div class="text2">
+                    <h1>Luxury Culinary Experiences at Altitude:</h1><br>
+                    <p>Embark on a culinary odyssey like never before, where every meal is a celebration of luxury, refinement, and the joy of savoring exceptional flavors at 30,000 feet.</p>
+                    
+                </div>
+                <img class="img5" src="img/GreyJet.jpg" alt="" width="100%" height="100%">
+                
+            </div>
+        </div>
+
+        <!--FOOTER-->
+<footer class="footer">
+    <div class="fundi">
+        <div class="company">
+            <h3>Company</h3>
+            <ul>
+            <li><a href="#">Contact Information</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        </div>
+        <div class="getHelp">
+            <h3>Get Help</h3>
+            <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Partnerships/Collaborations</a></li>
+            <li><a href="#">Careeer Oppoertunities</a></li>
+        </ul>
+        </div>
+        <div class="followUs">
+            <ul>
+            <div class="icons"><a href="#"><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+        </ul>
+        </div>
+
+
+    </div>
+</footer>
+</div>
+    </body>
+</html>
