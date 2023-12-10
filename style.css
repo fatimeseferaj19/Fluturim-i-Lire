@@ -115,21 +115,25 @@
   
     .container{
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: #00000092;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+
     }
     
     .back-video{
-      position: absolute;
-      right: 0;
-      bottom: 0;
       z-index: -1;
-      background-position: top right;
-      max-width: 100%;
-      min-width: 500px;
+      width: 100%; 
+     height: auto; 
+     background-size: cover;
+     position: absolute;
+     overflow: hidden;
+
     }
 
 
@@ -365,21 +369,58 @@
         align-items: center;
         justify-content: center;
         line-height: 1.5;
-
+        position: relative;
       }
       .followUs {
+        height: 40%;
         width: 80%;
-        margin-bottom: 1em;
+        margin-bottom: 6.5em;
+        position: relative;
+
+
+      }
+
+      .followUs a{
+        margin-bottom: -5em;
 
       }
       .icons{
-        height: 20%;
+        margin-bottom: -2em;
+        height: 40%;
+        position: relative;
+
+      }
+      .icons a i{
+        height: 35%;
+        position: relative;
+        font-size: 1.5em;
+
+      }
+      @media screen and (max-width: 768px) {
+        /* Adjust styles for screens up to 768px wide */
+      
+        /* Navigation styles */
+        ul li a {
+          padding: 1em 1em; /* Adjust padding for smaller screens */
+        }
+      
+        /* Container styles */
+        .content .titulli {
+          font-size: 4em; /* Adjust font size for smaller screens */
+        }
+      
+        /* Section1 styles */
+        .container1 {
+          flex-direction: column; /* Stack boxes vertically on smaller screens */
+          margin-right: 0; /* Remove right margin */
+        }
+      
+        .box {
+          width: 80%; /* Adjust box width for smaller screens */
+        }
+      
+        /* ... (Continue adjusting styles for other sections as needed) */
       }
 
 
 
-<<<<<<< HEAD
-     
-=======
-     
->>>>>>> a8e52f1824a2d3858680472f31d985ab146edb41

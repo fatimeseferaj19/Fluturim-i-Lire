@@ -217,21 +217,66 @@ opacity: 1;
   align-items: center;
   justify-content: center;
   line-height: 1.5;
-  color: white;
-
+  position: relative;
 }
 
 .followUs  {
   width: 80%;
   margin-bottom: 1em;
 }
-.followUs a{
+.followUs a i{
   color: white;
   z-index: 2;
+  position: absolute;
 }
 
 .fundi a {
   width: 3em;
   color: white;
 }
+.icons{
+  margin-bottom: -2em;
+  height: 40%;
+  position: relative;
 
+}
+.icons a i{
+  height: 35%;
+  position: relative;
+  font-size: 1.5em;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .img1 {
+    margin: 2em 0;
+  }
+
+  .img2 {
+    width: 100%;
+    max-width: none;
+    position: relative;
+    right: auto;
+    margin: 2em 0;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .container .text-jet {
+    font-size: 2em;
+  }
+
+  #text {
+    font-size: 1.5em;
+  }
+
+  .box {
+    width: 100%;
+    max-width: none;
+    margin: 1em 0;
+  }
+
+  .btn {
+    font-size: 0.8em;
+  }
+}
