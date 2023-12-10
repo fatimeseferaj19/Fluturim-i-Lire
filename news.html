@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="news.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="mausi">
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector('.cursor');
+
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left:"+(e.pageX - 10)+"px")
+            })
+
+            document.addEventListener('click', () => {
+                cursor.classList.add("expand");
+
+                setTimeout(() => {
+                    cursor.classList.remove("expand");
+                }, 500)
+            })
+
+           
+        </script>
+
+    <div class="permbajtja" >
+        <nav>
+            <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="#A1">Products</a></li>
+            <li><a href="news.html" >News</a></li>
+            <li><a href="ContactUs.html">ContactUs</a></li>
+        </ul>
+        </nav>
+
+        <div class="container">
+    <h1 class="text-jet">Private Jet News</h1>
+    <img class="img1" src="img/luxuryJet.jpg" alt="" width="100%" height="100%">
+    <img class="img2" src="img/brenda.jpg" alt="" width="100%" height="100%">
+
+</div>
+
+<h1 id="text">Latest</h1>
+
+
+<div class="container1">
+    <div class="box">
+        <img src="img/Dubai.jpg" alt="" width="100%" height="100%">
+        <h2>Private Jet from / to Dubai</h2>
+        <p></p>
+        <button class="btn">READ MORE</button>
+    </div>
+    <div class="box">
+        <img src="img/London.jpg" alt=""  width="100%" height="100%">
+        <h2>Private Jet from / to London</h2>
+        <p></p>
+        <button class="btn">READ MORE</button>
+
+    </div>
+    <div class="box">
+        <img src="img/Italy.jpg" alt=""  width="100%" height="100%">
+        <h2>Private Jet from / to Italy</h2>
+        <p></p>
+        <button class="btn">READ MORE</button>
+
+    </div>
+    <div class="box">
+        <img src="img/NYC.jpg" alt=""  width="100%" height="100%">
+        <h2>Private Jet from / to NewYour</h2>
+        <p></p>
+        <button class="btn">READ MORE</button>
+
+    </div>
+    <div class="box">
+        <img src="img/Germany.jpg" alt=""  width="100%" height="100%">
+        <h2>Private Jet from / to Germany</h2>
+        <p></p>
+        <button class="btn">READ MORE</button>
+
+    </div>
+    <div class="box">
+        <img src="img/Greece.jpg" alt=""  width="100%" height="100%">
+        <h2>Private Jet from / to Greece</h2>
+        <p></p>
+        <button class="btn">READ MORE</button>
+
+    </div>
+</div>
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="fundi">
+        <div class="company">
+            <h3>Company</h3>
+            <ul>
+            <li><a href="#">Contact Information</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        </div>
+        <div class="getHelp">
+            <h3>Get Help</h3>
+            <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Partnerships/Collaborations</a></li>
+            <li><a href="#">Careeer Oppoertunities</a></li>
+        </ul>
+        </div>
+        <div class="followUs">
+            <ul>
+            <div class="icons"><a href="#"><i class="fa-brands fa-square-facebook"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="icons"><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+        </ul>
+        </div>
+</body>
+</html>

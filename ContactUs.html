@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ContactUs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="mausi">
+        <div class="cursor"></div>
+        <script>
+            const cursor = document.querySelector('.cursor');
+
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left:"+(e.pageX - 10)+"px")
+            })
+
+            document.addEventListener('click', () => {
+                cursor.classList.add("expand");
+
+                setTimeout(() => {
+                    cursor.classList.remove("expand");
+                }, 500)
+            })
+
+           
+        </script>
+    <div class="section">
+        <div class="container">
+            <h1>Login</h1>
+            <form id="myForm">
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+                    <div class="error" id="nameError"></div>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="surname" placeholder="Enter your Surname">
+                    <div class="error" id="surnameError"></div>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" id="email" placeholder="Enter your Email">
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Enter your Password">
+                    <div class="error" id="passwordError"></div>
+                </div>
+                <button class="btn" type="button" onclick="validateForm()">LogIn</button>
+            </form>
+            <div class="conect">
+                <div class="conect">
+                    <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://discord.com/oauth2/authorize?response_type=code&client_id=936929561302675456&redirect_uri=https%3A%2F%2Fwww.midjourney.com%2F__%2Fauth%2Fhandler&state=AMbdmDn4NIDyrgr2xwTMV8GHITLLdnuNIGRaUBw-K0-g3ntNKWexSGKTWH1XXqXR0dtJeStCSjVkrUaPMMvC2XnhzhSfULxvkphRB6qa7KjNe4HZ3KBwJ8LuGcOcSMSc74soZk2qAmUuhZj24fDioG49YF8yBfbe14i1t1QYw5Nx7iY9Fj20j6iPxBpFwlvBMmidlNTq2JadZjkwlhDDv3QVYQ3pe5bOu8Pw01uqSJ-CGq1vqo7EEoa5Y-OlS10wS12kkB453oibdlw2_GnIK7y_nKQOGLvL9hHA12xtewAJ2bwk-BNUCYlBfMwpqnoY64g&scope=identify%20email%20guilds.join%20guilds.members.read%20role_connections.write&context_uri=https%3A%2F%2Fwww.midjourney.com"><i class="fa-brands fa-discord"></i></a>
+            
+                </div>            </div>
+        </div>
+    </div>
+    <script>
+        let nameRegex = /^[A-Z][a-z]{1,7}$/;
+        let surnameRegex = /^[A-Z][a-z]{1,7}$/;
+        let emailRegex = /[a-z0-9.-_]+@[a-z]+\.[a-z]{2,3}/;
+        let passwordRegex = /^[A-Z][0-9]{3}$/;
+
+        function validateForm() {
+            let nameInput = document.getElementById('name');
+            let nameError = document.getElementById('nameError');
+            let surnameInput = document.getElementById('surname');
+            let surnameError = document.getElementById('surnameError');
+            let emailInput = document.getElementById('email');
+            let emailError = document.getElementById('emailError');
+            let passwordInput = document.getElementById('password');
+            let passwordError = document.getElementById('passwordError');
+
+            nameError.innerText = '';
+            surnameError.innerText = '';
+            emailError.innerText = '';
+            passwordError.innerText = '';
+
+            if (nameRegex.test(nameInput.value) === false) {
+                nameError.innerText = 'The name must start with a capital letter.';
+                return;
+            }
+
+            if (surnameRegex.test(surnameInput.value) === false) {
+                surnameError.innerText = 'The surname must start with a capital letter.';
+                return;
+            }
+
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.innerText = 'Invalid email format';
+                return;
+            }
+
+            if (passwordRegex.test(passwordInput.value) === false) {
+                passwordError.innerText = 'The password must start with an uppercase letter and end with 3 numbers.';
+                return;
+            }
+
+            alert('Success');
+        }
+    </script>
+</body>
+</html>
