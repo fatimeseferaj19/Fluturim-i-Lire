@@ -397,29 +397,29 @@
 
       }
       @media screen and (max-width: 768px) {
-        /* Adjust styles for screens up to 768px wide */
+        
       
-        /* Navigation styles */
+        
         ul li a {
-          padding: 1em 1em; /* Adjust padding for smaller screens */
+          padding: 1em 1em;
         }
       
-        /* Container styles */
+      
         .content .titulli {
-          font-size: 4em; /* Adjust font size for smaller screens */
+          font-size: 4em;
         }
       
-        /* Section1 styles */
+        
         .container1 {
-          flex-direction: column; /* Stack boxes vertically on smaller screens */
-          margin-right: 0; /* Remove right margin */
+          flex-direction: column; 
+          margin-right: 0; 
         }
       
         .box {
-          width: 80%; /* Adjust box width for smaller screens */
+          width: 80%; 
         }
       
-        /* ... (Continue adjusting styles for other sections as needed) */
+  
       }
 
 
